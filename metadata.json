@@ -1,0 +1,23 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "vludd.exe@gmail.com",
+                "Name": "Vludd.exe"
+            }
+        ],
+        "Category": "Service",
+        "Description": "Frames animator from GIF. Responds to clicking on the area - plays another animation",
+        "Icon": "preferences-desktop-wallpaper",
+        "Id": "kde-frames-animator",
+        "License": "GPLv3",
+        "Name": "Frames Animator",
+        "Version": "1.0.0",
+        "Website": "https://github.com/vludd/kde-frames-animator"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-Provides": "Applet",
+    "X-Plasma-MainScript": "contents/ui/main.qml",
+    "KPackageStructure": "Plasma/Applet",
+    "ConfigSchema": "contents/config/main.xml"
+}

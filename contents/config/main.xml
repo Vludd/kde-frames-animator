@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+    <kcfgfile name="plasma-frames-animator-rc"/>
+    <group name="General">
+        <entry name="idleSource" type="String">
+            <default>../images/default.png</default>
+        </entry>
+        <entry name="idleFrameCount" type="Int">
+            <default>41</default>
+        </entry>
+        <entry name="idleFrameRate" type="Int">
+            <default>20</default>
+        </entry>
+
+        <entry name="pressSource" type="String">
+            <default>../images/active.png</default>
+        </entry>
+        <entry name="pressFrameCount" type="Int">
+            <default>51</default>
+        </entry>
+        <entry name="pressFrameRate" type="Int">
+            <default>20</default>
+        </entry>
+    </group>
+</kcfg>
