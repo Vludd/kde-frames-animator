@@ -15,6 +15,8 @@ Item {
     property alias cfg_pressFrameCount: pressFrameCountField.value
     property alias cfg_pressFrameRate: pressFrameRateField.value
 
+    property alias cfg_smoothFrames: smoothFramesCheck.checked
+
     function saveConfig() {
         plasmoid.configuration.idleSource = idleSourceField.text
         plasmoid.configuration.idleFrameCount = idleFrameCountField.value
@@ -22,6 +24,7 @@ Item {
         plasmoid.configuration.pressSource = pressSourceField.text
         plasmoid.configuration.pressFrameCount = pressFrameCountField.value
         plasmoid.configuration.pressFrameRate = pressFrameRateField.value
+        plasmoid.configuration.smoothFrames = smoothFramesCheck.checked
         plasmoid.configuration.writeConfig()
 
         console.log("idleSource: ", idleSourceField.text)
@@ -30,12 +33,22 @@ Item {
         console.log("pressSource: ", pressSourceField.text)
         console.log("pressFrameCount: ", pressFrameCountField.value)
         console.log("pressFrameRate: ", pressFrameRateField.value)
+
+        console.log("smoothFrames: ", smoothFramesCheck.checked)
     }
 
     ColumnLayout {
         id: layout
         anchors { left: parent.left; right: parent.right; top: parent.top; margins: 12 }
         spacing: 12
+
+        Label { text: "<b>Appearance</b>" }
+
+        RowLayout {
+            Layout.fillWidth: true
+            Label { text: "Smooth frames:" }
+            CheckBox { id: smoothFramesCheck }
+        }
 
         Label { text: "<b>Idle Animation</b>" }
 

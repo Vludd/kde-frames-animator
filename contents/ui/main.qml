@@ -4,8 +4,8 @@ import org.kde.plasma.plasma5support as Plasma5Support
 
 PlasmoidItem {
     id: root
-    width: 150
-    height: 100
+    width: 128
+    height: 128
 
     Plasmoid.backgroundHints: "NoBackground"
 
@@ -17,6 +17,8 @@ PlasmoidItem {
         console.log("pressSource:", plasmoid.configuration.pressSource)
         console.log("pressFrameCount:", plasmoid.configuration.pressFrameCount)
         console.log("pressFrameRate:", plasmoid.configuration.pressFrameRate)
+
+        console.log("smoothFrames:", plasmoid.configuration.smoothFrames)
     }
 
     Connections {
@@ -57,7 +59,7 @@ PlasmoidItem {
                 height: originalHeight
                 anchors.centerIn: parent
 
-                smooth: false
+                smooth: plasmoid.configuration.smoothFrames
 
                 property int originalWidth: 512
                 property int originalHeight: 512
